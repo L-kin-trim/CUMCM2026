@@ -31,7 +31,26 @@ try {
         throw 'Unable to inspect the remote branch.'
     }
 
-    Invoke-Git -GitArgs @('add', '--all')
+    # Refuse to publish any pending commit that deletes a path, even if a
+    # later commit restores it. Disable rename detection: renames remove paths.
+    if ($remoteStatus -eq 0) {
+        $outgoingRange = "origin/$branch..HEAD"
+    } else {
+        $outgoingRange = 'HEAD'
+    }
+    $pendingDeletions = Invoke-Git -GitArgs @('log', '--format=', '--name-only', '--no-renames', '--diff-filter=D', '-m', $outgoingRange)
+    if ($pendingDeletions) {
+        throw 'Push blocked: existing unpushed commits contain file deletions. Review those commits before syncing.'
+    }
+
+    # Rebuild the index from HEAD without changing files on disk. This also
+    # cancels previously staged deletions, then stages only existing files.
+    Invoke-Git -GitArgs @('restore', '--source=HEAD', '--staged', '--', '.')
+    Invoke-Git -GitArgs @('add', '--ignore-removal', '--', '.')
+    $stagedDeletions = Invoke-Git -GitArgs @('diff', '--cached', '--name-only', '--no-renames', '--diff-filter=D')
+    if ($stagedDeletions) {
+        throw 'Commit blocked: staged changes contain file deletions.'
+    }
     & git diff --cached --quiet
     $diffStatus = $LASTEXITCODE
     if ($diffStatus -eq 1) {
