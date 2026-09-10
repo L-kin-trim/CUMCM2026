@@ -1,0 +1,120 @@
+% 所有正文及表格公式按出现顺序保留
+\[
+\Delta t=\frac{1}{6}\ {\rm h},\quad E^L_{d,t}=L_{d,t}\Delta t,\quad E^{pv}_{d,t}=P^{pv}_{d,t}\Delta t
+\]
+
+\[
+d,t
+\]
+
+\[
+L_{d,t},P^{pv}_{d,t}
+\]
+
+\[
+p_{d,t},\widehat p_{d,t}
+\]
+
+\[
+G^0_{d,t},G_{d,t}
+\]
+
+\[
+C_{d,t},D_{d,t}
+\]
+
+\[
+S_{d,t}
+\]
+
+\[
+R_{d,t},W_{d,t}
+\]
+
+\[
+\delta^{k,+}_{d,t},\delta^{k,-}_{d,t}
+\]
+
+\[
+\eta_c,\eta_d
+\]
+
+\[
+G_{d,t}+E^{pv}_{d,t}+D_{d,t}+R_{d,t}=E^L_{d,t}+C_{d,t}+W_{d,t}
+\]
+
+\[
+S_{d,t+1}=S_{d,t}+\eta_c C_{d,t}-\frac{D_{d,t}}{\eta_d}
+\]
+
+\[
+1200\leq S_{d,t}\leq10800,\quad 0\leq C_{d,t},D_{d,t}\leq\frac{5000}{6}
+\]
+
+\[
+G_{d,t},R_{d,t},W_{d,t}\geq0,\quad S_{d+1,0}=S_{d,144}
+\]
+
+\[
+\widehat{\boldsymbol\beta}=(X^{\mathsf T}X+\Lambda)^{-1}X^{\mathsf T}y,\quad \widehat y_{d,t}=5000\,x_{d,t}^{\mathsf T}\widehat{\boldsymbol\beta}
+\]
+
+\[
+\widehat N_{d,t}=(\widehat L_{d,t}-\widehat P^{pv}_{d,t})\Delta t,\quad N^{(s)}_{d,t}=\widehat N_{d,t}+e^{(s)}_{d,t}+m\sigma_{d,t}
+\]
+
+\[
+\min J_1=\sum_{t=0}^{143}p_tG_t,\quad R_t=0,\quad S_0=S_{144}=6000
+\]
+
+\[
+J_{\varepsilon}=J_1+10^{-7}\sum_t(C_t+D_t)
+\]
+
+\[
+\sum_tG_t+\sum_tE^{pv}_t-\sum_tE^L_t-\sum_tW_t=(1-\eta_c)\sum_tC_t+(\eta_d^{-1}-1)\sum_tD_t
+\]
+
+\[
+\min\sum_t p_tG_t+\frac{1}{3}\sum_{s=1}^{3}\left[\sum_t5p_tR_t^{(s)}+\kappa z_s\right]
+\]
+
+\[
+z_s\geq S_{144}^{(s)}-6000,\quad z_s\geq6000-S_{144}^{(s)},\quad \kappa=0.5\overline p
+\]
+
+\[
+x_t=G_t-N_t,\quad C_t=\min\{x_t,5000/6,(10800-S_t)/\eta_c\}\quad(x_t\geq0)
+\]
+
+\[
+D_t=\min\{-x_t,5000/6,\eta_d(S_t-1200)\},\quad R_t=-x_t-D_t\quad(x_t<0)
+\]
+
+\[
+\widehat L_t^{\tau}=\max\{0,\widehat L_t^0+\overline e_{\tau}\exp[-(t-6\tau)/36]\}
+\]
+
+\[
+\delta_t^{k,+}=\max\{G_t^k-G_t^{k-1},0\},\quad\delta_t^{k,-}=\max\{G_t^{k-1}-G_t^k,0\}
+\]
+
+\[
+J_3=\sum_t p_tG_t^0+\sum_{k,t}(1.5p_t\delta_t^{k,+}-0.5p_t\delta_t^{k,-})+\sum_t5p_tR_t
+\]
+
+\[
+G_t^{\rm final}=G_t^0+\sum_k\delta_t^{k,+}-\sum_k\delta_t^{k,-}
+\]
+
+\[
+J_3=\sum_t p_tG_t^{\rm final}+0.5\sum_{k,t}p_t(\delta_t^{k,+}+\delta_t^{k,-})+\sum_t5p_tR_t
+\]
+
+\[
+\widehat p_{d,t}=\frac{1}{\min(7,d)}\sum_{j=\max(0,d-7)}^{d-1}p_{j,t}\quad(d\geq1)
+\]
+
+\[
+J_{\rm adj}=J-0.5\overline p\,(S_{\rm end}-S_{\rm start})
+\]

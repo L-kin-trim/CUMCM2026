@@ -1,0 +1,9 @@
+{
+  "method": "ridge",
+  "margin": 0.0,
+  "terminal": 0.5,
+  "cost": 853269.9237340217,
+  "R": 0.0,
+  "Send": 4502.047296945606,
+  "inventory_adjusted_cost": 853843.7873340719
+}

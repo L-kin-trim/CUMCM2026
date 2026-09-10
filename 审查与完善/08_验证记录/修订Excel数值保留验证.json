@@ -1,0 +1,79 @@
+[
+  {
+    "file": "result1_修订.xlsx",
+    "numeric_cells_compared": 158,
+    "max_numeric_difference": 0.0,
+    "text_changes": [
+      [
+        "计划购电量",
+        "A145",
+        "0:00+1-0:10+1",
+        "00:00-00:10"
+      ]
+    ]
+  },
+  {
+    "file": "result2_修订.xlsx",
+    "numeric_cells_compared": 54002,
+    "max_numeric_difference": 0.0,
+    "text_changes": [
+      [
+        "计划购电量",
+        "EO1",
+        "0:00-0:10+1",
+        "00:00-00:10"
+      ]
+    ]
+  },
+  {
+    "file": "result3_修订.xlsx",
+    "numeric_cells_compared": 102637,
+    "max_numeric_difference": 0.0,
+    "text_changes": [
+      [
+        "计划购电量",
+        "EO1",
+        "0:00-0:10+1",
+        "00:00-00:10"
+      ],
+      [
+        "调整购电量",
+        "EO1",
+        "0:00-0:10+1",
+        "00:00-00:10"
+      ]
+    ]
+  },
+  {
+    "file": "result4-2_修订.xlsx",
+    "numeric_cells_compared": 54082,
+    "max_numeric_difference": 0.0,
+    "text_changes": [
+      [
+        "计划购电量",
+        "EO1",
+        "0:00-0:10+1",
+        "00:00-00:10"
+      ]
+    ]
+  },
+  {
+    "file": "result4-3_修订.xlsx",
+    "numeric_cells_compared": 102661,
+    "max_numeric_difference": 0.0,
+    "text_changes": [
+      [
+        "计划购电量",
+        "EO1",
+        "0:00-0:10+1",
+        "00:00-00:10"
+      ],
+      [
+        "调整购电量",
+        "EO1",
+        "0:00-0:10+1",
+        "00:00-00:10"
+      ]
+    ]
+  }
+]

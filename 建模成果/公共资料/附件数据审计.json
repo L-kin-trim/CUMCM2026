@@ -1,0 +1,52 @@
+[
+  {
+    "file": "附件1.xlsx",
+    "sheet": "Sheet1",
+    "rows": 145,
+    "cols": 4,
+    "numeric_count": 432,
+    "min": 0,
+    "max": 7612.316,
+    "blank_count": 0
+  },
+  {
+    "file": "附件2.xlsx",
+    "sheet": "小区负载",
+    "rows": 366,
+    "cols": 145,
+    "numeric_count": 52560,
+    "min": 1995.7176,
+    "max": 7978.8849,
+    "blank_count": 0
+  },
+  {
+    "file": "附件2.xlsx",
+    "sheet": "光伏发电实际功率",
+    "rows": 366,
+    "cols": 145,
+    "numeric_count": 52560,
+    "min": 0,
+    "max": 10216.2,
+    "blank_count": 0
+  },
+  {
+    "file": "附件3.xlsx",
+    "sheet": "Sheet1",
+    "rows": 1461,
+    "cols": 26,
+    "numeric_count": 35040,
+    "min": 0,
+    "max": 9995.8875,
+    "blank_count": 1095
+  },
+  {
+    "file": "附件4.xlsx",
+    "sheet": "Sheet1",
+    "rows": 366,
+    "cols": 145,
+    "numeric_count": 52560,
+    "min": 0.0076,
+    "max": 1.7936,
+    "blank_count": 0
+  }
+]

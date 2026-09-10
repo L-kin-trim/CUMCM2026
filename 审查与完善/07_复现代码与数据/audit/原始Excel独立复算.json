@@ -1,0 +1,32 @@
+[
+  {
+    "file": "result1_final.xlsx",
+    "compared_interval_values": 144,
+    "max_abs_difference": 9.094947017729282e-13,
+    "result": "一致"
+  },
+  {
+    "file": "result2_final.xlsx",
+    "compared_interval_values": 48096,
+    "max_abs_difference": 1.1641532182693481e-10,
+    "result": "一致"
+  },
+  {
+    "file": "result3_final.xlsx",
+    "compared_interval_values": 96192,
+    "max_abs_difference": 8.731149137020111e-11,
+    "result": "一致"
+  },
+  {
+    "file": "result4-2_final.xlsx",
+    "compared_interval_values": 48096,
+    "max_abs_difference": 8.731149137020111e-11,
+    "result": "一致"
+  },
+  {
+    "file": "result4-3_final.xlsx",
+    "compared_interval_values": 96192,
+    "max_abs_difference": 8.731149137020111e-11,
+    "result": "一致"
+  }
+]
