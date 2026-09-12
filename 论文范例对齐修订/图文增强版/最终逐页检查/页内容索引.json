@@ -1,0 +1,290 @@
+[
+  {
+    "page": 1,
+    "start": "1 \n基于滚动预测与储能协同调度的 \n微网购电策略优化研究 \n摘 要 \n本文针对微网与外部电网的电力调控问题，建立能量平衡与储能状态约束下的购\n电优化模型，研究确定性日计划、负载与光伏变化、预报更新和",
+    "end": "新在所测策略中能够降低购电支出。模型通过能量\n守恒、容量、功率和费用核算检验；除问题一外，结果为给定策略的历史回放费用，\n其适用范围受预测误差、结算约定与实时控制规则限制。 \n关键词：微网；储能调度；线性规划；滚动预测；情景优化 \n \n \n",
+    "characters": 708
+  },
+  {
+    "page": 2,
+    "start": "2 \n第1 章 问题重述 \n1.1 问题背景 \n微网由小区负载、光伏发电设备和储能设备组成，并通过外部电网补充电能。光\n伏出力与用电需求在时间上的差异，使得单纯依靠即时购电难以充分利用低价电能和\n本地",
+    "end": "时段转移转化为带储能状态的费用最小化问题。由\n于负载、电价和光伏预测均已给定，购电量与充放电量可以作为连续决策变量。功率\n约束限制单个时段可转移的电量，容量约束限制跨时段积累的电量，首尾状态相等则\n防止通过消耗初始库存获得虚假的低费用。 \n",
+    "characters": 806
+  },
+  {
+    "page": 3,
+    "start": "3 \n在变量定义一致的条件下，供需平衡和储能动态均可写为线性关系。因此，采用\n线性规划直接求解，并以独立模型的对偶目标验证最优性。同时结合日内曲线解释低\n价充电、高价放电及部分时段仍需购电的原因。 \n",
+    "end": "件基准与仅利用历史价格的预测方案分开求解，并统一按实际交易价格结算。 \n本文沿用问题2 和问题3 的物理约束与执行规则，只改变决策使用的价格输入。\n通过并列比较两种信息条件，区分价格预测误差与预报更新的影响，使结果解释与模\n型假设一致。 \n",
+    "characters": 793
+  },
+  {
+    "page": 4,
+    "start": "4 \n第3 章 符号说明 \n主要符号及单位 \n符号 \n含义 \n单位 \n𝑑, 𝑡 \n日期与日内时段索引 \n— \n𝛥𝑡 \n时段长度，取1/6 小时 \nh \n𝐿𝑑,𝑡, 𝑃𝑑,𝑡\n𝑝𝑣 \n小区负载与光伏发电",
+    "end": "，\n实时执行使用当前观测；问题4 分别研究已知当日电价和仅用历史价格的条件。 \n6. 调整结算假设：取消电量退回原款，并支付50%的违约费用；每次增减按上一有效\n计划计算。题面未明确的退款和多次调整基准通过该约定补充，并检验不退款情形。 \n",
+    "characters": 872
+  },
+  {
+    "page": 5,
+    "start": "5 \n7. 初始化假设：1 月1 日无历史样本时，以附件1 负载、光伏与电价曲线冷启动；1 月\n用于预运行和参数选择，正式统计区间为2 月1 日至12 月31 日。 \n第5 章 模型建立与求解 \n5.",
+    "end": "表达\n为： \n𝐺𝑑,𝑡+ 𝐸𝑑,𝑡\n𝑝𝑣+ 𝐷𝑑,𝑡+ 𝑅𝑑,𝑡= 𝐸𝑑,𝑡\n𝐿+ 𝐶𝑑,𝑡+ 𝑊𝑑,𝑡  （2） \n弃置电量不产生收入，已经购入的富余电量仍须支付费用。因此，不能用负购电\n量代替弃置，也不能将全部富余电量当作可售电量。 \n",
+    "characters": 671
+  },
+  {
+    "page": 6,
+    "start": "6 \n \n图5-1 微网能量流及储能双向调节 \n能量流图将母线的供给与去向对应到平衡方程。储能同时具有吸收和释放电能两\n种运行方向，实际时段按状态选择其一；富余弃置不产生售电收入。 \n5.1.3 储能",
+    "end": "44 个充电量、144 个放电量、144 个弃置量和145 个\n储电状态组成。结合统一物理约束，模型为线性规划，可采用HiGHS 求解器计算[1,2]。\n为稳定选择解，调度程序加入极小的吞吐惩罚；独立最优性检验则直接最小化真实购\n电费。 \n",
+    "characters": 678
+  },
+  {
+    "page": 7,
+    "start": "7 \n𝐽𝜀= 𝐽1 + 10−7 ∑\n(\n143\n𝑡=0 𝐶𝑡+ 𝐷𝑡)  （7） \n在正电价且允许弃置的条件下，若某时段同时充放电，将充电减少𝑎、放电减少\n𝜂𝑐𝜂𝑑𝑎，储能变化保持不变，母线富余增加",
+    "end": "0 \n0.0000 \n16:00-16:10 \n445.4317 \n18:00-18:10 \n531.8940 \n20:00-20:10 \n0.0000 \n全天购电量 \n59,482.6990 \n全天购电费 \n35,126.95 \n \n \n",
+    "characters": 828
+  },
+  {
+    "page": 8,
+    "start": "8 \n表5-3 问题1 储能充放电量与首尾储电量 \n时间段 \n充电量 \n放电量 \n时间段 \n充电量 \n放电量 \n0:00-4:00 \n4,500.0000 \n0.0000 \n4:00-8:00 \n83",
+    "end": "伏接近或超过负载，较低电价仍可能使购电充电具有经济性，因此12:00—\n12:10 的购电量不必为零。晚间高价时段的放电受功率和库存限制，部分需求仍须由外\n网补充。 \n在首尾储能相等时，全天供给与需求之差应等于充放电损耗，其检验关系为： \n",
+    "characters": 611
+  },
+  {
+    "page": 9,
+    "start": "9 \n∑(\n𝑡𝐺𝑡+ 𝐸𝑡\n𝑝𝑣−𝐸𝑡\n𝐿−𝑊𝑡) = (1 −𝜂𝑐) ∑𝐶𝑡\n𝑡\n+ (𝜂𝑑\n−1 −1) ∑𝐷𝑡\n𝑡\n  （8） \n独立计算的全天能量残差小于10−9 kWh，两种求解算法给出相同",
+    "end": "31 \n150.46 \n302.77 \n表中单位为kW，评价区间为2 月至12 月。预测误差用于解释运行效果，未用该\n外样本结果反向选择参数；经济选型以1 月验证期间的库存校正费用为依据，因而不\n要求误差最小的方法必然具有最低购电费用。 \n",
+    "characters": 923
+  },
+  {
+    "page": 10,
+    "start": "10 \n \n图5-3 2025 年6 月21 日的负载与光伏预测对比 \n典型日曲线显示，预测能够刻画主要日内变化，但局部偏差仍然存在。负载与光\n伏偏差共同改变净负荷，因此购电优化还需考虑历史残差情景；",
+    "end": ", 𝜅= 0.5𝑝  （14） \n各情景均满足统一物理约束。这里允许情景内动作依赖整条情景，因此所得规划\n是用于选择日前购电的两阶段近似；它没有建立完整场景树的非预见性约束，不能视\n为严格的多阶段最优控制。实际电池执行另按当前观测决定。 \n",
+    "characters": 611
+  },
+  {
+    "page": 11,
+    "start": "11 \n5.3.3 实时储能控制与日际衔接 \n记当前实际净负荷电量为𝑁𝑡，常规购电抵消净负荷后的余量为𝑥𝑡。富余时优先充\n电，缺口时优先放电，超过储能调节能力的缺口进行紧急购电： \n𝑥𝑡= 𝐺𝑡−𝑁𝑡",
+    "end": "以看出，紧急购电虽然只占部分电量，却以5 倍价格结算，对总费\n用有显著影响。扩大计划裕度可能减少缺口，但也会增加已付费富余，因此不能仅以\n紧急购电量最小作为计划目标。指定日期的购电、储能与紧急区间见5.6 节，均来自实\n际连续回放轨迹。 \n",
+    "characters": 666
+  },
+  {
+    "page": 12,
+    "start": "12 \n \n图5-4 问题2 与问题3 策略D 的月度紧急购电量 \n月度统计将全年紧急购电分解到各月，用于观察风险在时间上的分布及预报更新\n后的变化。两组策略均按同一实际序列连续运行，图中差异反映预测",
+    "end": "}  （19） \n其中𝜏以小时计、𝑡为10 分钟时段索引。更新时以实际储电量作为剩余模型的初始\n状态，冻结所有已执行交易，只优化后续计划。本文借鉴滚动时域思想[4]，实施6 小\n时预报触发的购电调整，电池每10 分钟继续按实时规则执行。 \n",
+    "characters": 499
+  },
+  {
+    "page": 13,
+    "start": "13 \n \n图5-5 2025 年6 月21 日各次预报触发的计划增减 \n热力图中的红色表示相对上一有效计划增购，蓝色表示减购，灰色为更新时刻以\n前已经执行的区间。图中各次调整仅作用于未来时段，直观体",
+    "end": "负，因为其中包含取消交易的退款；\n纯调整附加费则非负。费用核算时必须保留这一区别。 \n5.4.3 求解步骤与更新时点比较 \nStep1：制定零点计划 \n依据0 时光伏预报和历史负载预测构造情景，求解当天购电计划，并执行到下一\n预报时刻。 \n",
+    "characters": 659
+  },
+  {
+    "page": 14,
+    "start": "14 \nStep2：更新状态与剩余计划 \n收到新预报后，读取已实现的储电状态和负载残差；对尚未执行区间重新求解，\n记录相对上一有效计划的增购、减购及相应费用。 \nStep3：完成日内执行与年度评价 \n",
+    "end": " 时更新具有经济依据。 \n上述比较存在状态传递和策略联动，不能解释为每个时点独立的信息价值。对于\n题面以外的新增时刻，还需取得该时刻实际可用的预报，比较新增调整费、预测改善\n及储能机会成本。现有结果不能证明任意提高更新频率都会降低费用。 \n",
+    "characters": 674
+  },
+  {
+    "page": 15,
+    "start": "15 \n5.5 问题4 的模型建立与求解 \n5.5.1 波动价格的信息条件 \n问题4 保留前三问的能量和交易约束，将固定分时价格替换为附件4 的价格序列。\n为避免未来价格泄漏，本文设置两类方案：一类假",
+    "end": "次回放中降低了\n费用。 \n历史价格预测使4-2 和4-3 费用分别比条件基准高0.46%和0.85%。这一差额是给\n定预测与贪心执行规则下的经验结果，不是严格的信息价值上界。已知价格方案不能\n直接作为未知未来价格条件下的可实施最优策略。 \n",
+    "characters": 738
+  },
+  {
+    "page": 16,
+    "start": "16 \n \n图5-7 2025 年6 月21 日波动电价下的购电与储能联动 \n图示对应当天价格曲线已知条件下的问题4-3 策略D。共同时间轴展示价格变化、\n时段购电量与储电状态的联系；储电量虚线为上下",
+    "end": "0 \n0.0000 \n16:00-16:10 \n461.5890 \n18:00-18:10 \n695.3051 \n20:00-20:10 \n0.0000 \n全天购电量 \n66,797.9104 \n全天购电费 \n39,990.10 \n \n \n",
+    "characters": 563
+  },
+  {
+    "page": 17,
+    "start": "17 \n表5-9 2025-03-20 实际储能充放电量 \n时间段 \n充电量 \n放电量 \n时间段 \n充电量 \n放电量 \n00:00-04:00 \n8,550.4921 \n406.8213 \n04:00",
+    "end": "\n16:00-20:00 \n136.1602 \n6,010.1989 \n20:00-24:00 \n668.0329 \n2,676.1702 \n0:00 储电量 \n1,334.9402 \n \n24:00 储电量 \n1,718.0078 \n \n",
+    "characters": 1414
+  },
+  {
+    "page": 18,
+    "start": "18 \n表5-14 2025-12-21 日前购电量及全天结果 \n时间段 \n购电量 \n时间段 \n购电量 \n时间段 \n购电量 \n10:00-10:10 \n0.0000 \n12:00-12:10 \n1,1",
+    "end": "\n64,356.26 \n0.00 \n1,037.90 \n65,394.16 \n同一四小时区间内充、放电累计量均为正，表示不同10 分钟时段之间发生运行切\n换，并不表示同一时刻同时充放电。紧急区间由相邻正值时段合并，空余位置以横线\n表示。 \n",
+    "characters": 1115
+  },
+  {
+    "page": 19,
+    "start": "19 \n5.6.2 问题3 的指定日期结果 \n表5-18 2025-03-20 日前购电量及全天结果 \n时间段 \n购电量 \n时间段 \n购电量 \n时间段 \n购电量 \n10:00-10:10 \n0.000",
+    "end": "0 \n0.0000 \n16:00-16:10 \n582.8025 \n18:00-18:10 \n676.0235 \n20:00-20:10 \n0.0000 \n全天购电量 \n72,730.8991 \n全天购电费 \n45,783.96 \n \n \n",
+    "characters": 1348
+  },
+  {
+    "page": 20,
+    "start": "20 \n表5-23 2025-09-23 实际储能充放电量 \n时间段 \n充电量 \n放电量 \n时间段 \n充电量 \n放电量 \n00:00-04:00 \n8,522.5849 \n76.4939 \n04:00",
+    "end": ".00 \n23,085.25 \n2025-09-23 \n45,783.96 \n-1,483.70 \n678.98 \n44,979.24 \n2025-12-21 \n62,649.23 \n1,781.88 \n69.76 \n64,500.87 \n",
+    "characters": 1358
+  },
+  {
+    "page": 21,
+    "start": "21 \n表5-28 调整后的最终常规购电量 \n日期 \n10:00 \n12:00 \n14:00 \n16:00 \n18:00 \n20:00 \n全天 \n03-20 \n0.00 \n530.09 \n0.00 \n",
+    "end": "0 \n0.0000 \n16:00-16:10 \n243.6957 \n18:00-18:10 \n429.7072 \n20:00-20:10 \n0.0000 \n全天购电量 \n39,414.3625 \n全天购电费 \n20,287.91 \n \n \n",
+    "characters": 1268
+  },
+  {
+    "page": 22,
+    "start": "22 \n表5-32 2025-06-21 实际储能充放电量 \n时间段 \n充电量 \n放电量 \n时间段 \n充电量 \n放电量 \n00:00-04:00 \n1,982.4727 \n3,695.4480 \n04",
+    "end": "6:00-20:00 \n126.8923 \n5,314.2748 \n20:00-24:00 \n3,704.2350 \n2,249.9071 \n0:00 储电量 \n5,564.3592 \n \n24:00 储电量 \n5,790.6127 \n \n",
+    "characters": 1425
+  },
+  {
+    "page": 23,
+    "start": "23 \n表5-37 四个指定日期的紧急购电明细 \n03-20 时间段 \n03-20 购电\n量 \n06-21 时间段 \n06-21 购电\n量 \n09-23 时间段 \n09-23 购电\n量 \n12-21 ",
+    "end": "6:00-20:00 \n174.5376 \n6,377.8626 \n20:00-24:00 \n1,992.3802 \n2,899.4282 \n0:00 储电量 \n2,316.1934 \n \n24:00 储电量 \n2,363.2918 \n \n",
+    "characters": 1132
+  },
+  {
+    "page": 24,
+    "start": "24 \n表5-41 2025-06-21 日前购电量及全天结果 \n时间段 \n购电量 \n时间段 \n购电量 \n时间段 \n购电量 \n10:00-10:10 \n0.0000 \n12:00-12:10 \n0.0",
+    "end": "0 \n0.0000 \n16:00-16:10 \n774.1051 \n18:00-18:10 \n730.2102 \n20:00-20:10 \n0.0000 \n全天购电量 \n97,555.7323 \n全天购电费 \n73,293.83 \n \n \n",
+    "characters": 1333
+  },
+  {
+    "page": 25,
+    "start": "25 \n表5-46 2025-12-21 实际储能充放电量 \n时间段 \n充电量 \n放电量 \n时间段 \n充电量 \n放电量 \n00:00-04:00 \n5,763.9579 \n74.6913 \n04:00",
+    "end": "整精度\n见结果表。“最终常规购电”已包含各次调整，不能再与增购量重复相加。 \n同一四小时区间内充、放电累计量均为正，表示不同10 分钟时段之间发生运行切\n换，并不表示同一时刻同时充放电。紧急区间由相邻正值时段合并，空余位置以横线\n表示。 \n",
+    "characters": 1303
+  },
+  {
+    "page": 26,
+    "start": "26 \n5.7 模型检验与敏感性分析 \n5.7.1 物理约束与费用一致性检验 \n对12 组全年策略分别检查11 项指标，共132 项检验，最大绝对误差为5.82 ×\n10−11，低于10−6的数值容差",
+    "end": "与扩大容量能够降低费用；增加安全裕度可能因额外购\n电和弃置而提高成本。取消不退款时，策略D 费用上升，但未在该条款下重新比较全\n部A—D 组合，因此不能断言所有更新时点仍然有利。24 天结果用于说明局部变化趋\n势，不外推为全年收益保证。 \n",
+    "characters": 892
+  },
+  {
+    "page": 27,
+    "start": "27 \n \n图5-8 关键参数变化对24 日库存校正费用的影响 \n以零变化线为参照，左侧表示费用下降，右侧表示费用上升。该图与敏感性表使\n用相同的策略D 和24 日样本，便于比较效率、容量及结算参数的",
+    "end": "问题2 至问题4 所得费用属于所构造策略的回放结果，不具有全局最优保证。 \n模型未考虑自放电、寿命损耗、售电和外网交易功率限制，结算规则也采用了明\n确的退款约定。这些简化与题目数据范围相适应，但推广到实际微网前需要补充设备\n与市场约束。 \n",
+    "characters": 566
+  },
+  {
+    "page": 28,
+    "start": "28 \n6.3 模型的改进方向 \n可将电池执行规则改进为基于条件预测的短时域优化，并在场景树中加入非预见\n性约束，使储能决策兼顾后续风险。对于新增价格发布机制、退款条款或预报时点，\n应重新训练和回放，",
+    "end": ". Model Predictive Control: Theory, Computation, and \nDesign[M]. 2nd ed., 6th printing. Nob Hill Publishing, 2026. \n \n \n",
+    "characters": 807
+  },
+  {
+    "page": 29,
+    "start": "29 \n附录A 支撑材料与运行说明 \n支撑材料位于工程的审查与完善目录。input 保存题设附件，results 保存逐时段轨\n迹和逐日费用，audit 保存验证结果，figures 保存图形。下表列",
+    "end": "令与依赖版本见既有运行说明。 \n本次使用OpenAI Codex 辅助代码审查、计算复核、文字修订和公式排版。数值来\n自题设附件与所列程序。该说明不替代正式参赛所需的完整AI 工具交互记录；参赛者\n应据实际使用情况整理相关材料。 \n \n \n",
+    "characters": 814
+  },
+  {
+    "page": 30,
+    "start": "30 \n附录B model.py 源程序 \n\"\"\"C 题微网：数据审计、因果预测、情景日前 LP 和 MPC。单位 kWh / 元。\"\"\" \nfrom pathlib import Path \nimp",
+    "end": "dump(manifest,ROOT/'audit'/'输入SHA256.json') \n    tm=[];templates={} \n    for f in (ROOT/'input').glob('result*.xlsx'): \n",
+    "characters": 3482
+  },
+  {
+    "page": 31,
+    "start": "31 \n        w=load_workbook(f);s=w['计划购电量'];labels=[s.cell(i,1).value for i in range(2,146)] if \nf.s",
+    "end": "=np.zeros(A.shape[0]);bu=np.tile([capacity*.5,-capacity*.5],k) \n    weights=np.ones(k)/k;c[:n]=p if old is None else 0 \n",
+    "characters": 3433
+  },
+  {
+    "page": 32,
+    "start": "32 \n    bounds=[(0,None)]*nv;eps=1e-7 \n    for s in range(k): \n        off=n+s*5*n;b[2*n*s:2*n*s+n]=",
+    "end": "    pv0=fp[d].copy() \n        if q3_active:pv0=interpolate_hourly_forecast(data['F'][d,0],data['PV'][d-1,-1] if d else \n",
+    "characters": 3331
+  },
+  {
+    "page": 33,
+    "start": "33 \n0,interp) \n        pred=(fl[d]-pv0)*DT \n        # 问题3 用同一发布时刻过去日期的预报残差，避免把日前误差套在临近预报。 \n        i",
+    "end": "er'])*(p*R).sum(axis=1) \n    checks={'能量守恒':np.max(np.abs(bal)),'SOC 动态':np.max(np.abs(S[:,1:]-S[:,:-1]-eta*C+D/eta)), \n",
+    "characters": 4083
+  },
+  {
+    "page": 34,
+    "start": "34 \n            'SOC 边界':max(0,cap*.1-S.min(),S.max()-cap*.9),'充放电上限':max(0,C.max()-5000*DT,D.max()-",
+    "end": "else 'FAIL') for k,v in checks.items()] \n    assert all(x['状态']=='PASS' for x in result),result \n    return result \n \n \n",
+    "characters": 811
+  },
+  {
+    "page": 35,
+    "start": "35 \n附录C run.py 源程序 \nfrom model import * \nimport argparse, time \n  \ndef main(stage): \n    data=load_d",
+    "end": "B',True,True,(6\n,)),('q43_C',True,True,(6,12)),('q43_D',True,True,(6,12,18)),('q42_causal_price',False,True,()),('q43_c\n",
+    "characters": 3514
+  },
+  {
+    "page": 36,
+    "start": "36 \nausal_price',True,True,(6,12,18))] \n        for tag,q3,pa,updates in experiments: \n            i",
+    "end": "_=='__main__': \n    p=argparse.ArgumentParser();p.add_argument('--stage',default='all');main(p.parse_args().stage) \n \n \n",
+    "characters": 3007
+  },
+  {
+    "page": 37,
+    "start": "37 \n附录D review_results.py 源程序 \n\"\"\"独立回读原始Excel，与复现轨迹比较；不写入任何原始文件。\"\"\" \nfrom model import * \n  \ndef mai",
+    "end": "nd(dict(file=fname,compared_interval_values=counts,max_abs_difference=float(err),result='一\n致' if err<1e-5 else '需核查')) \n",
+    "characters": 3706
+  },
+  {
+    "page": 38,
+    "start": "38 \n    dump(checks,ROOT/'audit/原始Excel 独立复算.json') \n    dump(typical,ROOT/'results/指定日期完整结果.json') ",
+    "end": " x in checks),checks \n    print(json.dumps(checks,ensure_ascii=False,indent=2)) \n  \nif __name__=='__main__':main() \n \n \n",
+    "characters": 315
+  },
+  {
+    "page": 39,
+    "start": "39 \n附录E q1_certificate.py 源程序 \n\"\"\"问题1 可复现求解。运行 python solve_q1.py，依赖 numpy scipy openpyxl matplotlib",
+    "end": "':float(pv.sum()/6), \n                'baseline_cost':float(price@baseline),'baseline_purchase':float(baseline.sum()), \n",
+    "characters": 3284
+  },
+  {
+    "page": 40,
+    "start": "40 \n                'baseline_spill':float(np.maximum(pv-load,0).sum()/6), \n                'price_m",
+    "end": "sure_ascii=False,indent=2)) \n  \nif __name__=='__main__': \n    sys.stdout.reconfigure(encoding='utf-8') \n    main() \n \n \n",
+    "characters": 4103
+  },
+  {
+    "page": 41,
+    "start": "41 \n附录F deliver.py 源程序 \n本程序保留完整上下文以便复现因果检验。复现检验仅调用causality 函数；export\n函数为历史导出实现，不用于本次修订表的生成。 \n\"\"\"在原工",
+    "end": "  \nname=f.stem.replace('_final','');orig=load_workbook(ROOT/'input'/f'{name}.xlsx');w=load_workbook(f,data\n_only=True) \n",
+    "characters": 3138
+  },
+  {
+    "page": 42,
+    "start": "42 \n        assert w.sheetnames==orig.sheetnames \n        for sn in w.sheetnames: \n            asser",
+    "end": "cted.jso\nn').read_text(encoding='utf-8'));checks=[] \n    for m in METHODS: \n        for key,col in [('L',1),('PV',2)]: \n",
+    "characters": 3996
+  },
+  {
+    "page": 43,
+    "start": "43 \n            for d in [31,78,171,265,354]: \n                altered=data[key].copy();altered[d:]=",
+    "end": "audit'/'信息集.json') \n    print('causality PASS',len(checks)) \n  \nif __name__=='__main__': \n    export();causality() \n \n \n",
+    "characters": 1626
+  },
+  {
+    "page": 44,
+    "start": "44 \n附录G figures.py 源程序 \nfrom model import * \nimport matplotlib;matplotlib.use('Agg') \nimport matplot",
+    "end": "s='--');ax.set(xlabel='时刻（h）\n',ylabel='负载功率（kW）',title=str(DATES[d].date()),xlim=(0,24));ax.legend();save(fig,5,'负载预测效果\n",
+    "characters": 4105
+  },
+  {
+    "page": 45,
+    "start": "45 \n','2025 年6 月21 日岭回归负载预测与实际曲线对比。',dict(时刻=hours,实际=data['L'][d],预测=f['ridge_L'][d])) \nfig,ax=plt.",
+    "end": "cost/base-1)*100 \nfig,ax=plt.subplots(figsize=(9,5.5),layout='constrained');colors=[COL[1] if x>0 else COL[2] for x in \n",
+    "characters": 4681
+  },
+  {
+    "page": 46,
+    "start": "46 \nsub.变化率];bars=ax.barh(sub['case'],sub.变化\n率,color=colors);ax.axvline(0,c='black',lw=1);ax.bar_lab",
+    "end": "ste(im,((i%3)*540,(i//3)*365)) \nsheet.save(ROOT/'figures'/'图表总览_仅供校验.jpg',quality=90) \nprint('figures',len(paths)) \n \n \n",
+    "characters": 1110
+  },
+  {
+    "page": 47,
+    "start": "47 \n附录H make_added_figures.py 源程序 \n\"\"\"读取已验证结果绘制论文新增图，不重新拟合或修改模型。\"\"\" \nfrom pathlib import Path \nimpor",
+    "end": "json').write_text(json.dumps(monthly,ensure_ascii=False,indent=2),encoding='utf-8') \n  \n# 4 每次更新相对上一有效计划的差额；区分已经执行的区间。 \n",
+    "characters": 3499
+  },
+  {
+    "page": 48,
+    "start": "48 \nversions=np.array(json.loads((R/'q3_D_versions.json').read_text(encoding='utf-8'))[str(day)]) \nd",
+    "end": "rite_text(json.dumps(manifest,ensure_ascii=False,indent=2),encoding='utf-8') \nprint('Created',len(manifest),'figures') \n",
+    "characters": 2711
+  }
+]

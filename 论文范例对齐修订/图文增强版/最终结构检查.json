@@ -1,0 +1,23 @@
+{
+  "pages": 48,
+  "abstract_pages": 1,
+  "body_including_references_pages": 27,
+  "appendix_start_page": 29,
+  "native_math_objects": 50,
+  "display_math_objects": 25,
+  "raw_latex_commands_in_word": [],
+  "nested_math_paragraphs": 0,
+  "tables": 52,
+  "docx_bytes": 804333,
+  "margins": [
+    {
+      "{http://schemas.openxmlformats.org/wordprocessingml/2006/main}top": "1417",
+      "{http://schemas.openxmlformats.org/wordprocessingml/2006/main}right": "1417",
+      "{http://schemas.openxmlformats.org/wordprocessingml/2006/main}bottom": "1417",
+      "{http://schemas.openxmlformats.org/wordprocessingml/2006/main}left": "1417",
+      "{http://schemas.openxmlformats.org/wordprocessingml/2006/main}header": "709",
+      "{http://schemas.openxmlformats.org/wordprocessingml/2006/main}footer": "709",
+      "{http://schemas.openxmlformats.org/wordprocessingml/2006/main}gutter": "0"
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "formula_texts_unchanged": 50,
+  "body_tables_unchanged": 51,
+  "inline_figures": 8,
+  "note": "前版保存含额外样式节点及合并文本运行；忽略这些序列化差异后，逐公式数学文本一致。"
+}
