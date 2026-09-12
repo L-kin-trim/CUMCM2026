@@ -1,0 +1,289 @@
+Q1 {'total_energy': np.float64(59482.69899835391), 'cost': np.float64(35126.94858928963), 'initial': np.float64(6000.0), 'final': np.float64(6000.0), 'max_balance_error': 0.0, 'no_battery_cost': 48052.046590846665, 'six_slots': {'10:00-10:10': np.float64(0.0), '12:00-12:10': np.float64(480.4124499999999), '14:00-14:10': np.float64(0.0), '16:00-16:10': np.float64(445.43165000000005), '18:00-18:10': np.float64(531.8940499999999), '20:00-20:10': np.float64(0.0)}, 'left_endpoint_alternative_cost': np.float64(35126.84858928963)}
+tuned mean
+tuned ma7
+tuned ma14
+tuned ma30
+tuned ewma
+tuned ridge
+SELECTED {'method': 'ridge', 'margin': 0.0, 'terminal': 0.5, 'cost': 853269.9237340217, 'R': 0.0, 'Send': 4502.047296945606, 'inventory_adjusted_cost': 853843.7873340719}
+q2 2025-01-01 cost 212601.24
+q2 2025-03-02 cost 76244.79
+q2 2025-05-01 cost 51240.58
+q2 2025-06-30 cost 54497.33
+q2 2025-08-29 cost 25723.38
+q2 2025-10-28 cost 45385.19
+q2 2025-12-27 cost 29089.67
+q2 2025-12-31 cost 63988.13
+q3_A 2025-01-01 cost 212601.24
+q3_A 2025-03-02 cost 50498.62
+q3_A 2025-05-01 cost 45978.49
+q3_A 2025-06-30 cost 51030.42
+q3_A 2025-08-29 cost 27342.74
+q3_A 2025-10-28 cost 62145.5
+q3_A 2025-12-27 cost 27285.09
+q3_A 2025-12-31 cost 64188.19
+q3_B 2025-01-01 cost 212601.24
+q3_B 2025-03-02 cost 51418.91
+q3_B 2025-05-01 cost 46634.82
+q3_B 2025-06-30 cost 51625.84
+q3_B 2025-08-29 cost 26129.63
+q3_B 2025-10-28 cost 47962.54
+q3_B 2025-12-27 cost 26991.77
+q3_B 2025-12-31 cost 62811.33
+q3_C 2025-01-01 cost 212601.24
+q3_C 2025-03-02 cost 54626.1
+q3_C 2025-05-01 cost 47780.55
+q3_C 2025-06-30 cost 52044.47
+q3_C 2025-08-29 cost 27222.0
+q3_C 2025-10-28 cost 47890.02
+q3_C 2025-12-27 cost 28312.46
+q3_C 2025-12-31 cost 62861.33
+q3_D 2025-01-01 cost 212601.24
+q3_D 2025-03-02 cost 51797.43
+q3_D 2025-05-01 cost 40241.77
+q3_D 2025-06-30 cost 52200.43
+q3_D 2025-08-29 cost 26423.26
+q3_D 2025-10-28 cost 47719.66
+q3_D 2025-12-27 cost 27997.45
+q3_D 2025-12-31 cost 63067.46
+q42 2025-01-01 cost 258398.06
+q42 2025-03-02 cost 77608.38
+q42 2025-05-01 cost 55836.78
+q42 2025-06-30 cost 58482.8
+q42 2025-08-29 cost 23895.92
+q42 2025-10-28 cost 47300.23
+q42 2025-12-27 cost 24565.24
+q42 2025-12-31 cost 74159.74
+q43_A 2025-01-01 cost 258398.06
+q43_A 2025-03-02 cost 54437.01
+q43_A 2025-05-01 cost 46478.44
+q43_A 2025-06-30 cost 54077.9
+q43_A 2025-08-29 cost 25243.57
+q43_A 2025-10-28 cost 63042.15
+q43_A 2025-12-27 cost 22966.51
+q43_A 2025-12-31 cost 73970.22
+q43_B 2025-01-01 cost 258398.06
+q43_B 2025-03-02 cost 54036.6
+q43_B 2025-05-01 cost 46574.85
+q43_B 2025-06-30 cost 54989.46
+q43_B 2025-08-29 cost 24251.36
+q43_B 2025-10-28 cost 49985.89
+q43_B 2025-12-27 cost 22512.9
+q43_B 2025-12-31 cost 72306.07
+q43_C 2025-01-01 cost 258398.06
+q43_C 2025-03-02 cost 57724.76
+q43_C 2025-05-01 cost 47914.4
+q43_C 2025-06-30 cost 55572.79
+q43_C 2025-08-29 cost 25149.83
+q43_C 2025-10-28 cost 49882.4
+q43_C 2025-12-27 cost 23667.07
+q43_C 2025-12-31 cost 72458.84
+q43_D 2025-01-01 cost 258398.06
+q43_D 2025-03-02 cost 55337.16
+q43_D 2025-05-01 cost 40899.44
+q43_D 2025-06-30 cost 55736.89
+q43_D 2025-08-29 cost 24553.88
+q43_D 2025-10-28 cost 49761.47
+q43_D 2025-12-27 cost 23407.88
+q43_D 2025-12-31 cost 72545.65
+q42_causal_price 2025-01-01 cost 257230.05
+q42_causal_price 2025-03-02 cost 76106.74
+q42_causal_price 2025-05-01 cost 59047.24
+q42_causal_price 2025-06-30 cost 59084.52
+q42_causal_price 2025-08-29 cost 24098.19
+q42_causal_price 2025-10-28 cost 47228.61
+q42_causal_price 2025-12-27 cost 25219.14
+q42_causal_price 2025-12-31 cost 74833.97
+q43_causal_price 2025-01-01 cost 257230.05
+q43_causal_price 2025-03-02 cost 55226.23
+q43_causal_price 2025-05-01 cost 41042.25
+q43_causal_price 2025-06-30 cost 56237.09
+q43_causal_price 2025-08-29 cost 24681.83
+q43_causal_price 2025-10-28 cost 50011.05
+q43_causal_price 2025-12-27 cost 23901.42
+q43_causal_price 2025-12-31 cost 73930.91
+sensitivity q2 baseline 1042596.66
+sensitivity q2 eta085 1079272.25
+sensitivity q2 eta095 1004457.67
+sensitivity q2 roundtrip090 1005395.88
+sensitivity q2 capacity9600 1089349.27
+sensitivity q2 capacity14400 995582.6
+sensitivity q2 capacity18000 943648.27
+sensitivity q2 emergency3 1000927.43
+sensitivity q2 emergency7 1059407.34
+sensitivity q2 margin0 1042596.66
+sensitivity q2 margin1 1123767.41
+sensitivity q2 terminal0 1044859.22
+sensitivity q2 terminal1 1048123.25
+sensitivity q2 error150 1040658.16
+sensitivity q3_D baseline 1022900.21
+sensitivity q3_D eta085 1062287.86
+sensitivity q3_D eta095 988074.47
+sensitivity q3_D roundtrip090 989076.46
+sensitivity q3_D capacity9600 1072754.83
+sensitivity q3_D capacity14400 980034.03
+sensitivity q3_D capacity18000 933054.76
+sensitivity q3_D emergency3 988322.12
+sensitivity q3_D emergency7 1025514.43
+sensitivity q3_D margin0 1022900.21
+sensitivity q3_D margin1 1096090.07
+sensitivity q3_D terminal0 1030550.29
+sensitivity q3_D terminal1 1033015.35
+sensitivity q3_D fee025 996558.19
+sensitivity q3_D fee075 1029034.6
+sensitivity q3_D no_refund 1032305.71
+sensitivity q3_D pchip 1023293.27
+sensitivity q3_D error150 1023928.7
+DONE all
+{
+  "cost": 35126.94858928963,
+  "purchase": 59482.69899835391,
+  "charge": 20740.66613168725,
+  "discharge": 16799.939566666668,
+  "spill": 0.0,
+  "baseline_cost": 48052.04659084667,
+  "savings_pct": 26.89812176287018,
+  "blocks": [
+    {
+      "period": "0:00-4:00",
+      "charge": 4500.0,
+      "discharge": 0.0
+    },
+    {
+      "period": "4:00-8:00",
+      "charge": 833.3333333333333,
+      "discharge": 6365.8412
+    },
+    {
+      "period": "8:00-12:00",
+      "charge": 4787.964288065849,
+      "discharge": 1702.9969833333334
+    },
+    {
+      "period": "12:00-16:00",
+      "charge": 5286.0351769547315,
+      "discharge": 91.10138333333344
+    },
+    {
+      "period": "16:00-20:00",
+      "charge": 0.0,
+      "discharge": 5780.131883333333
+    },
+    {
+      "period": "20:00-24:00",
+      "charge": 5333.333333333333,
+      "discharge": 2859.8681166666665
+    }
+  ],
+  "selected": [
+    {
+      "period": "10:00-10:10",
+      "q": 0.0
+    },
+    {
+      "period": "12:00-12:10",
+      "q": 480.4124499999999
+    },
+    {
+      "period": "14:00-14:10",
+      "q": 0.0
+    },
+    {
+      "period": "16:00-16:10",
+      "q": 445.43165000000005
+    },
+    {
+      "period": "18:00-18:10",
+      "q": 531.8940499999999
+    },
+    {
+      "period": "20:00-20:10",
+      "q": 0.0
+    }
+  ],
+  "checks": {
+    "balance_max_abs_kwh": 1.4921397450962104e-13,
+    "storage_max_abs_kwh": 8.739675649849232e-13,
+    "initial_kwh": 6000.0,
+    "terminal_kwh": 6000.0,
+    "minimum_storage_kwh": 1200.0,
+    "maximum_storage_kwh": 10800.0,
+    "maximum_charge_kw": 5000.0,
+    "maximum_discharge_kw": 4293.9182,
+    "simultaneous_charge_discharge_slots": 0,
+    "dual_objective_yuan": 35126.948589289634,
+    "primal_dual_gap_yuan": 7.275957614183426e-12,
+    "global_energy_residual_kwh": 1.8189894035458565e-11,
+    "independent_algorithm_cost_gap_yuan": 0.0
+  },
+  "sensitivity": [
+    {
+      "case": "充放电各85%",
+      "cost": 36603.406480027064,
+      "purchase": 61728.97512460496,
+      "end": 6000.0
+    },
+    {
+      "case": "充放电各90%",
+      "cost": 35126.94858928963,
+      "purchase": 59482.69899835391,
+      "end": 6000.0
+    },
+    {
+      "case": "往返效率90%",
+      "cost": 33801.49554222201,
+      "purchase": 57526.24348088351,
+      "end": 6000.0
+    },
+    {
+      "case": "最大功率4000kW",
+      "cost": 35247.870899616864,
+      "purchase": 59482.32668827161,
+      "end": 6000.0
+    },
+    {
+      "case": "最大功率6000kW",
+      "cost": 35083.29348008143,
+      "purchase": 59482.69899835391,
+      "end": 6000.0
+    },
+    {
+      "case": "初始电量1200kWh",
+      "cost": 35202.2152559563,
+      "purchase": 59482.69899835391,
+      "end": 1200.0
+    },
+    {
+      "case": "初始电量10800kWh",
+      "cost": 35175.68192262295,
+      "purchase": 59482.69899835391,
+      "end": 10800.0
+    },
+    {
+      "case": "不约束日末回归",
+      "cost": 32909.86525595629,
+      "purchase": 54149.36566502058,
+      "end": 1200.0
+    },
+    {
+      "case": "时刻作区间起点并循环补0时",
+      "cost": 35126.84858928963,
+      "purchase": 59482.69899835391,
+      "end": 6000.0
+    }
+  ]
+}
+causality PASS 61
+risk validation {'stage': '1月验证', 'weight': 0, 'cost': np.float64(936469.2554870495), 'emergency': np.float64(17593.677860147334)}
+risk validation {'stage': '1月验证', 'weight': 0.1, 'cost': np.float64(936469.2554870495), 'emergency': np.float64(17593.677860147334)}
+risk validation {'stage': '1月验证', 'weight': 0.3, 'cost': np.float64(936469.2554870495), 'emergency': np.float64(17593.677860147334)}
+risk validation {'stage': '1月验证', 'weight': 1.0, 'cost': np.float64(936469.2554870495), 'emergency': np.float64(17593.677860147334)}
+risk test {'stage': '四季24日', 'weight': 0, 'cost': np.float64(1022316.9255421349), 'emergency': np.float64(6535.543268611706)}
+risk test {'stage': '四季24日', 'weight': 0.1, 'cost': np.float64(1022316.9255421349), 'emergency': np.float64(6535.543268611715)}
+risk test {'stage': '四季24日', 'weight': 0.3, 'cost': np.float64(1022316.9255421349), 'emergency': np.float64(6535.543268611715)}
+risk test {'stage': '四季24日', 'weight': 1.0, 'cost': np.float64(1022316.9255421349), 'emergency': np.float64(6535.543268611715)}
+{"errors": {"MAE": 272.7795377412817, "RMSE": 387.56769387256935, "bias": -13.662125901458838, "p95_abs": 832.6095494525937}, "comparison": {"mean_gain": 2019.0813217135076, "ci_low": 1150.080060442288, "ci_high": 3183.1384598062564, "positive_days": 190, "days": 334, "replicates": 2000, "block_days": 7}, "stress": [{"case": "原始负荷", "emergency_kwh": 28257.01489311284, "emergency_cost": 144776.16085725784, "min_soc": 1200.0, "max_soc": 10800.0, "balance_error": 1.1368683772161603e-13, "end_soc": 1393.2201763300013}, {"case": "负载增加5%", "emergency_kwh": 1130708.7902149279, "emergency_cost": 6644189.684092671, "min_soc": 1200.0, "max_soc": 10800.0, "balance_error": 1.1368683772161603e-13, "end_soc": 1200.0}, {"case": "光伏减少10%", "emergency_kwh": 980867.1846887649, "emergency_cost": 6233949.875209787, "min_soc": 1200.0, "max_soc": 10800.0, "balance_error": 1.1368683772161603e-13, "end_soc": 1370.341733194083}, {"case": "联合不利扰动", "emergency_kwh": 2428844.7979978714, "emergency_cost": 14700893.454352807, "min_soc": 1200.0, "max_soc": 10800.0, "balance_error": 1.1368683772161603e-13, "end_soc": 1200.0}], "risk": {"selected_weight": 0, "records": [{"stage": "1月验证", "weight": 0, "cost": 936469.2554870495, "emergency": 17593.677860147334}, {"stage": "1月验证", "weight": 0.1, "cost": 936469.2554870495, "emergency": 17593.677860147334}, {"stage": "1月验证", "weight": 0.3, "cost": 936469.2554870495, "emergency": 17593.677860147334}, {"stage": "1月验证", "weight": 1.0, "cost": 936469.2554870495, "emergency": 17593.677860147334}, {"stage": "四季24日", "weight": 0, "cost": 1022316.9255421349, "emergency": 6535.543268611706}, {"stage": "四季24日", "weight": 0.1, "cost": 1022316.9255421349, "emergency": 6535.543268611715}, {"stage": "四季24日", "weight": 0.3, "cost": 1022316.9255421349, "emergency": 6535.543268611715}, {"stage": "四季24日", "weight": 1.0, "cost": 1022316.9255421349, "emergency": 6535.543268611715}]}}
+新增8幅图已生成
+figures 15
+Created 6 figures
+模块恢复及请求的运行阶段已完成。

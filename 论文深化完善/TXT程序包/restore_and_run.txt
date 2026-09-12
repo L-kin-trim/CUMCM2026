@@ -1,0 +1,16 @@
+"""直接运行 python restore_and_run.txt --smoke；只向本包的src和结果目录写入。"""
+from pathlib import Path
+import argparse,subprocess,sys,hashlib,json
+root=Path(__file__).resolve().parent
+parser=argparse.ArgumentParser();parser.add_argument('--smoke',action='store_true');parser.add_argument('--all',action='store_true');args=parser.parse_args()
+for folder in ['src','input','audit','results','计算结果','检验结果','图','figures']: (root/folder).mkdir(exist_ok=True)
+manifest=json.loads((root/'文件清单.json').read_text(encoding='utf-8'))
+for entry in manifest:
+    raw=(root/entry['file']).read_bytes()
+    assert hashlib.sha256(raw).hexdigest()==entry['sha256'],entry['file']
+    (root/'src'/entry['module']).write_bytes(raw)
+def run(name,*argv):subprocess.run([sys.executable,str(root/'src'/name),*argv],check=True)
+if args.smoke:run('run.py','--stage','q1');run('q1_certificate.py')
+if args.all:
+    run('run.py','--stage','all');run('q1_certificate.py');run('causality.py');run('extended_checks.py');run('make_figures.py');run('figures_legacy.py');run('figures_added.py')
+print('模块恢复及请求的运行阶段已完成。')

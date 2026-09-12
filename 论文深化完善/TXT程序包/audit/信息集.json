@@ -1,0 +1,8 @@
+{
+  "selection_cutoff": "2025-01-31 24:00",
+  "evaluation_start": "2025-02-01 00:00",
+  "history_rule": "strictly before day d, endpoint at day d 00:00 permitted",
+  "Jan_policy": "EWMA, margin .5, terminal .5; not retrospectively changed",
+  "price_assumption": "Q4 main: known day curve; causal extensions separate",
+  "template_last_column": "user-approved erratum: current day 00:00-00:10"
+}

@@ -1,0 +1,86 @@
+[
+  {
+    "file": "common.txt",
+    "module": "common.py",
+    "purpose": "公共参数和文件接口",
+    "sha256": "c30859ca26ba782fc634e94252e0dffdc386d39b673c4b53db18ab1a0649ffac"
+  },
+  {
+    "file": "data_io.txt",
+    "module": "data_io.py",
+    "purpose": "附件解析与审计",
+    "sha256": "493b3925779cdbc671d670a2d8360fbd98527fb69cc17c27ff5a706b09369549"
+  },
+  {
+    "file": "forecasting.txt",
+    "module": "forecasting.py",
+    "purpose": "因果预测与误差",
+    "sha256": "299574579b435b0d6859413f0e197e1ecf6394cea7574e4329503125146b6984"
+  },
+  {
+    "file": "optimization.txt",
+    "module": "optimization.py",
+    "purpose": "线性规划求解",
+    "sha256": "0dc3fb36afe877d37f3288ed7f03da9eee25db34fae25e87c86c895a68de5f5d"
+  },
+  {
+    "file": "dispatch.txt",
+    "module": "dispatch.py",
+    "purpose": "运行与交易结算",
+    "sha256": "328e688209d9a40757ef8eb1e80c3a8798e833075856e96d40500e8f2122d037"
+  },
+  {
+    "file": "validation.txt",
+    "module": "validation.py",
+    "purpose": "物理与费用验证",
+    "sha256": "e5112b9d64bfbf23e8a7b0c92959ddff8dff414a4b8b88b4e6a16348ae128bd1"
+  },
+  {
+    "file": "model.txt",
+    "module": "model.py",
+    "purpose": "模块统一接口",
+    "sha256": "135ef63dd80f9f733aa5e62d42aa20f7c05a2a7fb1184fb44b9ff793a5aeff50"
+  },
+  {
+    "file": "run.txt",
+    "module": "run.py",
+    "purpose": "四问计算 参数选型 灵敏度实验",
+    "sha256": "acde3652217a6e2d96432a6c5f55b33f451ee2c8615806beb9cfaebb06e4ae36"
+  },
+  {
+    "file": "q1_certificate.txt",
+    "module": "q1_certificate.py",
+    "purpose": "独立求解与原始对偶检验",
+    "sha256": "7ccc664255df640bf8a4b0b4aff14918e44a049f77e5ef4d613329cb8c40abdb"
+  },
+  {
+    "file": "extended_checks.txt",
+    "module": "extended_checks.py",
+    "purpose": "压力 误差 重采样及风险模型扩展",
+    "sha256": "39206546f06f1c8dff9a528d2365bc79c31b4d8933abe466a4b4e996209cf571"
+  },
+  {
+    "file": "causality.txt",
+    "module": "causality.py",
+    "purpose": "未来信息污染检验",
+    "sha256": "422e6186f54b3e453fa0967c59e8b1383028162ddc5b0ab550240aa6c8bca4b2"
+  },
+  {
+    "file": "make_figures.txt",
+    "module": "make_figures.py",
+    "purpose": "新增八图复现",
+    "sha256": "3fa5c481104364aef05d6c1e6df4bd6f3d657e52ee7c6c50d6993f6febb35c34"
+  },
+  {
+    "file": "figures_legacy.txt",
+    "module": "figures_legacy.py",
+    "purpose": "基础结果图形复现",
+    "sha256": "5df77c26f0ef14e47ce309d6413d800fdd0b47203c966f66ca679c8e7b1a7f7c"
+  },
+  {
+    "file": "figures_added.txt",
+    "module": "figures_added.py",
+    "purpose": "前版六幅分析图复现",
+    "sha256": "1e8a131020e3670f40d070c0fd4c6b18563bb31406813418130045c0ce6af76d"
+  }
+]

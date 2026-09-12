@@ -1,0 +1,9 @@
+功能模块均为UTF-8 TXT，内容是完整Python源代码。恢复脚本可直接由Python运行，无须手工改扩展名。
+1. 安装Python 3.12及依赖：python -m pip install -r requirements.txt
+2. 将附件1.xlsx至附件4.xlsx和附件5中的五份原始模板放在本目录input文件夹（不要使用final结果代替模板）。
+3. 运行 python restore_and_run.txt --smoke，核验附件解析和问题1两个独立求解器。
+4. 运行 python restore_and_run.txt --all，执行全量预测选型、12组全年回放、24日敏感性、因果测试及新增检验。全量计算耗时明显长于smoke。
+5. 可单独运行 src/run.py --stage forecast、annual、sensitivity。强制重算全年用annual_force。单独阶段须有前序结果。
+6. results保存全精度NPZ及CSV；audit保存11类约束和因果检查；计算结果保存问题1证书；检验结果保存新增检验。当前包不执行历史Excel导出实现，避免覆写原表。
+7. 各模块功能、SHA256与恢复后的文件名见文件清单.json。不得更改单个TXT后继续使用旧校验清单。
+8. figures_legacy和figures_added重现基础结果图及前版六图，make_figures重现本次新增八图；问题1独立轨迹图由q1_certificate生成。

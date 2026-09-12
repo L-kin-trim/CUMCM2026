@@ -1,0 +1,66 @@
+[
+  {
+    "figure": "01_微网能量流.png",
+    "source": [
+      "C题.md"
+    ],
+    "meaning": "只表示母线能量流；储能双向，弃置无收益。",
+    "input_sha256": {}
+  },
+  {
+    "figure": "02_典型日预测.png",
+    "source": [
+      "data.npz",
+      "forecasts.npz"
+    ],
+    "meaning": "2025-06-21，144个时段，预测仅用此前日期。",
+    "input_sha256": {
+      "data.npz": "61cca9b9344ee85e717c5d26177ae158ba26ca0a95e50035c8f1bc5484d5e3c3",
+      "forecasts.npz": "b87e6a60617392e79e2e761af3a03cc2abd657aedefa14ff3c147e4be203da80"
+    }
+  },
+  {
+    "figure": "03_月度紧急购电.png",
+    "source": [
+      "q2.npz",
+      "q3_D.npz"
+    ],
+    "meaning": "按月累加10分钟紧急电量，不比较不同单位费用。",
+    "input_sha256": {
+      "q2.npz": "b05ffa69d42d11592d7ea5e490f9333bc1d3fd1557812d4cf1eb1fca156669bf",
+      "q3_D.npz": "1b0e57ab545cc0b2a1a56df5bb00cd3702e2fef660e28bde3cbfa00e6dcf399d"
+    }
+  },
+  {
+    "figure": "04_滚动调整热力图.png",
+    "source": [
+      "q3_D_versions.json"
+    ],
+    "meaning": "2025-06-21；红色增购，蓝色减购，灰色已执行；相邻版本差额。",
+    "input_sha256": {
+      "q3_D_versions.json": "b19ab27607e77cea49524525b3a8133af7600fa9a2eb2ea041d94030fe4b22bc"
+    }
+  },
+  {
+    "figure": "05_电价购电储能联动.png",
+    "source": [
+      "data.npz",
+      "q43_D.npz"
+    ],
+    "meaning": "2025-06-21，问题4-3策略D，当日价格曲线已知条件；虚线为库存边界。",
+    "input_sha256": {
+      "data.npz": "61cca9b9344ee85e717c5d26177ae158ba26ca0a95e50035c8f1bc5484d5e3c3",
+      "q43_D.npz": "4e33dc4a4fcb8eee9eeef90726930a3e8f3658a20ebed29ba57852fa62dade14"
+    }
+  },
+  {
+    "figure": "06_敏感性对比.png",
+    "source": [
+      "敏感性24日.csv"
+    ],
+    "meaning": "仅24个代表日的策略D；不外推为全年收益。",
+    "input_sha256": {
+      "敏感性24日.csv": "23e3b88b3068c6818c7e573433c100274ca8feee563875290e960d6daa5beffd"
+    }
+  }
+]

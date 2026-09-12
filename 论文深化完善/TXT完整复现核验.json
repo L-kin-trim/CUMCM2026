@@ -1,0 +1,59 @@
+{
+  "年度汇总.csv": {
+    "rows": 12,
+    "max_difference": 0.0
+  },
+  "敏感性24日.csv": {
+    "rows": 32,
+    "max_difference": 0.0
+  },
+  "预测精度.csv": {
+    "rows": 24,
+    "max_difference": 0.0
+  },
+  "q2": {
+    "G0": 0.0,
+    "G": 0.0,
+    "C": 0.0,
+    "D": 0.0,
+    "R": 0.0,
+    "W": 0.0,
+    "S": 0.0
+  },
+  "q3_D": {
+    "G0": 0.0,
+    "G": 0.0,
+    "C": 0.0,
+    "D": 0.0,
+    "R": 0.0,
+    "W": 0.0,
+    "S": 0.0
+  },
+  "q42": {
+    "G0": 0.0,
+    "G": 0.0,
+    "C": 0.0,
+    "D": 0.0,
+    "R": 0.0,
+    "W": 0.0,
+    "S": 0.0
+  },
+  "q43_D": {
+    "G0": 0.0,
+    "G": 0.0,
+    "C": 0.0,
+    "D": 0.0,
+    "R": 0.0,
+    "W": 0.0,
+    "S": 0.0
+  },
+  "physical_checks_passed": 132,
+  "runtime_versions": {
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "pandas": "3.0.1",
+    "matplotlib": "3.11.1",
+    "openpyxl": "3.1.5"
+  },
+  "full_pipeline": "restore_and_run.txt --all exited 0; forecast/annual/sensitivity/certificate/causality/extended checks/all figures completed"
+}

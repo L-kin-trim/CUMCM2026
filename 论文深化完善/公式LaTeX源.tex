@@ -1,0 +1,211 @@
+\[
+d,t
+\]
+
+\[
+\Delta t
+\]
+
+\[
+L_{d,t},P^{pv}_{d,t}
+\]
+
+\[
+E^L_{d,t},E^{pv}_{d,t}
+\]
+
+\[
+p_{d,t},\widehat p_{d,t}
+\]
+
+\[
+G^0_{d,t},G^k_{d,t}
+\]
+
+\[
+C_{d,t},D_{d,t}
+\]
+
+\[
+S_{d,t}
+\]
+
+\[
+R_{d,t},W_{d,t}
+\]
+
+\[
+\eta_c,\eta_d
+\]
+
+\[
+N_{d,t},N^{(s)}_{d,t}
+\]
+
+\[
+\delta^{k,+}_{d,t},\delta^{k,-}_{d,t}
+\]
+
+\[
+J,\kappa
+\]
+
+\[
+\Delta t=\frac{1}{6},\qquad E^L_{d,t}=L_{d,t}\Delta t,\qquad E^{pv}_{d,t}=P^{pv}_{d,t}\Delta t
+\]
+
+\[
+G_{d,t}+E^{pv}_{d,t}+D_{d,t}+R_{d,t}=E^L_{d,t}+C_{d,t}+W_{d,t}
+\]
+
+\[
+S_{d,t+1}=S_{d,t}+\eta_c C_{d,t}-\frac{D_{d,t}}{\eta_d}
+\]
+
+\[
+1200\leq S_{d,t}\leq10800,\qquad 0\leq C_{d,t},D_{d,t}\leq\frac{5000}{6}
+\]
+
+\[
+G_{d,t},R_{d,t},W_{d,t}\geq0,\qquad S_{d+1,0}=S_{d,144}
+\]
+
+\[
+\min J_1=\sum_{t=0}^{143}p_tG_t,\qquad R_t=0,\qquad S_0=S_{144}=6000
+\]
+
+\[
+J_{\varepsilon}=J_1+10^{-7}\sum_{t=0}^{143}(C_t+D_t)
+\]
+
+\[
+a
+\]
+
+\[
+\eta_c\eta_d a
+\]
+
+\[
+(1-\eta_c\eta_d)a
+\]
+
+\[
+7.28\times10^{-12}
+\]
+
+\[
+\sum_t(G_t+E^{pv}_t-E^L_t-W_t)=(1-\eta_c)\sum_tC_t+(\eta_d^{-1}-1)\sum_tD_t
+\]
+
+\[
+10^{-9}
+\]
+
+\[
+\widehat{\boldsymbol\beta}=(X^{\mathsf T}X+\Lambda)^{-1}X^{\mathsf T}y
+\]
+
+\[
+\widehat y_{d,t}=5000\,x_{d,t}^{\mathsf T}\widehat{\boldsymbol\beta}
+\]
+
+\[
+\widehat N_{d,t}=(\widehat L_{d,t}-\widehat P^{pv}_{d,t})\Delta t
+\]
+
+\[
+N^{(s)}_{d,t}=\widehat N_{d,t}+e^{(s)}_{d,t}+m\sigma_{d,t}
+\]
+
+\[
+\min\left\{\sum_t p_tG_t+\frac{1}{3}\sum_{s=1}^{3}\left[\sum_t5p_tR_t^{(s)}+\kappa z_s\right]\right\}
+\]
+
+\[
+z_s\geq S_{144}^{(s)}-6000,\quad z_s\geq6000-S_{144}^{(s)},\quad\kappa=0.5\overline p
+\]
+
+\[
+N_t
+\]
+
+\[
+x_t
+\]
+
+\[
+x_t=G_t-N_t
+\]
+
+\[
+C_t=\min\{x_t,5000/6,(10800-S_t)/\eta_c\},\quad x_t\geq0
+\]
+
+\[
+D_t=\min\{-x_t,5000/6,\eta_d(S_t-1200)\},\quad x_t<0
+\]
+
+\[
+R_t=-x_t-D_t,\quad x_t<0
+\]
+
+\[
+\widehat L_t^{\tau}=\max\{0,\widehat L_t^0+\overline e_{\tau}\exp[-(t-6\tau)/36]\}
+\]
+
+\[
+\tau
+\]
+
+\[
+t
+\]
+
+\[
+\delta_t^{k,+}=\max\{G_t^k-G_t^{k-1},0\},\quad\delta_t^{k,-}=\max\{G_t^{k-1}-G_t^k,0\}
+\]
+
+\[
+J_3=\sum_t p_tG_t^0+\sum_{k,t}(1.5p_t\delta_t^{k,+}-0.5p_t\delta_t^{k,-})+\sum_t5p_tR_t
+\]
+
+\[
+G_t^{\mathrm{final}}=G_t^0+\sum_k\delta_t^{k,+}-\sum_k\delta_t^{k,-}
+\]
+
+\[
+J_3=\sum_t p_tG_t^{\mathrm{final}}+0.5\sum_{k,t}p_t(\delta_t^{k,+}+\delta_t^{k,-})+\sum_t5p_tR_t
+\]
+
+\[
+\widehat p_{d,t}=\frac{1}{\min(7,d)}\sum_{j=\max(0,d-7)}^{d-1}p_{j,t},\quad d\geq1
+\]
+
+\[
+J_{\mathrm{adj}}=J-0.5\overline p\,(S_{\mathrm{end}}-S_{\mathrm{start}})
+\]
+
+\[
+e_i=\widehat{N}_i^{P}-N_i^{P},\quad \mathrm{MAE}=\frac{1}{n}\sum_i|e_i|,\quad \mathrm{RMSE}=\sqrt{\frac{1}{n}\sum_i e_i^2}
+\]
+
+\[
+7.28\times10^{-12}
+\]
+
+\[
+5.82\times10^{-11}
+\]
+
+\[
+1.2\times10^{-10}
+\]
+
+\[
+\Delta J_d=J_{A,d}^{\mathrm{adj}}-J_{D,d}^{\mathrm{adj}}
+\]
+
+\[
+\min J_{\lambda}=J_{\mathrm{base}}+\lambda Z,\qquad Z\geq\sum_t5p_tR_t^{(s)},\quad s=1,\ldots,K
+\]
